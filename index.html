@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puertos y Protocolos de Red</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 min-h-screen text-white font-sans"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 bg-black bg-opacity-30 backdrop-blur-md z-50 p-4"
+    >
+      <div class="flex justify-between items-center max-w-6xl mx-auto">
+        <h1 class="text-xl font-bold">Puertos y Protocolos</h1>
+        <div class="flex space-x-2">
+          <button
+            id="prevBtn"
+            class="bg-white bg-opacity-20 hover:bg-opacity-30 px-3 py-1 rounded-lg transition-all"
+          >
+            ← Anterior
+          </button>
+          <span
+            id="slideCounter"
+            class="px-3 py-1 bg-white bg-opacity-20 rounded-lg"
+            >1 / 7</span
+          >
+          <button
+            id="nextBtn"
+            class="bg-white bg-opacity-20 hover:bg-opacity-30 px-3 py-1 rounded-lg transition-all"
+          >
+            Siguiente →
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="presentation-container" class="pt-20 px-6">
+      <div class="slide active fade-in">
+        <div class="max-w-4xl mx-auto text-center py-16">
+          <h1
+            class="text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
+          >
+            Puertos y Protocolos de Red
+          </h1>
+          <p class="text-xl mb-12 text-gray-300 max-w-3xl mx-auto">
+            Aprende cómo los protocolos son las reglas y los puertos son las
+            puertas de entrada para que los servicios de internet funcionen
+            correctamente.
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mt-16">
+            <div
+              class="protocol-card bg-red-500 bg-opacity-20 p-6 rounded-xl border border-red-400"
+            >
+              <div class="text-3xl mb-2 flex justify-center items-center">
+                <svg
+                  class="w-8 h-8 text-red-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3.055 11.23a9.002 9.002 0 0117.89 0M21.285 11.23a9.002 9.002 0 01-17.89 0m11.196 9.77l-4.242-4.242M12 21.036V21a9.002 9.002 0 01-9-9c0-.986.196-1.93.555-2.812M12 21.036V21a9.002 9.002 0 009-9c0-.986-.196-1.93-.555-2.812M12 3a9.002 9.002 0 019 9c0 .986-.196 1.93-.555 2.812M12 3a9.002 9.002 0 00-9 9c0 .986.196 1.93.555 2.812m11.196-9.77L12 12m-4.242-4.242l4.242 4.242m0 0l4.242-4.242m-4.242 4.242l-4.242 4.242m4.242-4.242l4.242-4.242m-4.242 4.242L12 12m-4.242 4.242l4.242-4.242m-4.242-4.242l4.242 4.242M12 3v18"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-bold">HTTP/HTTPS</h3>
+              <p class="text-sm text-gray-300">Páginas Web</p>
+            </div>
+            <div
+              class="protocol-card bg-green-500 bg-opacity-20 p-6 rounded-xl border border-green-400"
+            >
+              <div class="text-3xl mb-2 flex justify-center items-center">
+                <svg
+                  class="w-8 h-8 text-green-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v3m0 0h.01M12 12h.01M12 18h.01M16 12h.01M8 12h.01"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-bold">SSH</h3>
+              <p class="text-sm text-gray-300">Acceso Remoto</p>
+            </div>
+            <div
+              class="protocol-card bg-blue-500 bg-opacity-20 p-6 rounded-xl border border-blue-400"
+            >
+              <div class="text-3xl mb-2 flex justify-center items-center">
+                <svg
+                  class="w-8 h-8 text-blue-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2zM12 15V9m-3 3h6"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-bold">FTP</h3>
+              <p class="text-sm text-gray-300">Transferencia</p>
+            </div>
+            <div
+              class="protocol-card bg-yellow-500 bg-opacity-20 p-6 rounded-xl border border-yellow-400"
+            >
+              <div class="text-3xl mb-2 flex justify-center items-center">
+                <svg
+                  class="w-8 h-8 text-yellow-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-bold">DNS</h3>
+              <p class="text-sm text-gray-300">Búsqueda de Sitios</p>
+            </div>
+            <div
+              class="protocol-card bg-purple-500 bg-opacity-20 p-6 rounded-xl border border-purple-400"
+            >
+              <div class="text-3xl mb-2 flex justify-center items-center">
+                <svg
+                  class="w-8 h-8 text-purple-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2-3H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-bold">SMTP</h3>
+              <p class="text-sm text-gray-300">Correo Electrónico</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="max-w-5xl mx-auto py-8">
+          <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold mb-4 text-red-400">
+              <span class="inline-block mr-2">
+                <svg
+                  class="w-8 h-8 text-red-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m-9-9a9 9 0 019-9m10 9a1.5 1.5 0 01-1.5 1.5M21 12a9 9 0 00-9-9m0 0a9 9 0 00-9 9m9-9h.01M12 21a9 9 0 009-9m-9 9a9 9 0 01-9-9m10 0a1.5 1.5 0 00-1.5-1.5M21 12a9 9 0 01-9 9m-9-9a9 9 0 019-9"
+                  />
+                </svg>
+              </span>
+              HTTP/HTTPS
+            </h2>
+            <p class="text-lg text-gray-300">El idioma de la World Wide Web</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-red-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-red-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                </span>
+                ¿Qué es?
+              </h3>
+              <p class="text-gray-200 mb-4">
+                Son las reglas que usa tu navegador para conectarse a un sitio
+                web y transferir la información (texto, imágenes, videos). HTTPS
+                es la versión segura que encripta todos los datos.
+              </p>
+              <div class="bg-red-500 bg-opacity-20 p-4 rounded-lg">
+                <p class="font-semibold">Puertos:</p>
+                <p>• HTTP: 80 (Para sitios normales)</p>
+                <p>• HTTPS: 443 (Para sitios seguros)</p>
+              </div>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-green-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-green-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+                Beneficios y Desafíos
+              </h3>
+              <ul class="text-gray-200 space-y-2">
+                <li>• Pro: Es el estándar universal, fácil de usar.</li>
+                <li>• Pro: HTTPS mantiene tu información segura.</li>
+                <li>• Contra: HTTP es inseguro, se envía en texto plano.</li>
+                <li>
+                  • Contra: Las conexiones pueden ser lentas si no están
+                  optimizadas.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="max-w-5xl mx-auto py-8">
+          <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold mb-4 text-green-400">
+              <span class="inline-block mr-2">
+                <svg
+                  class="w-8 h-8 text-green-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v3m0 0h.01M12 12h.01M12 18h.01M16 12h.01M8 12h.01"
+                  />
+                </svg>
+              </span>
+              SSH
+            </h2>
+            <p class="text-lg text-gray-300">
+              Tu llave secreta para la conexión remota
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-green-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-green-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                </span>
+                ¿Qué es?
+              </h3>
+              <p class="text-gray-200 mb-4">
+                Es un protocolo para acceder de forma segura a otros
+                computadores a través de Internet. Permite controlar un servidor
+                a distancia como si estuvieras sentado frente a él.
+              </p>
+              <div class="bg-green-500 bg-opacity-20 p-4 rounded-lg">
+                <p class="font-semibold">Puerto:</p>
+                <p>• 22 (Tu puerta segura para entrar)</p>
+              </div>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-green-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-green-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+                Beneficios y Desafíos
+              </h3>
+              <ul class="text-gray-200 space-y-2">
+                <li>• Pro: Toda la información está cifrada y protegida.</li>
+                <li>• Pro: Te permite transferir archivos de forma segura.</li>
+                <li>
+                  • Contra: Si no usas contraseñas fuertes, puede ser
+                  vulnerable.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="max-w-5xl mx-auto py-8">
+          <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold mb-4 text-blue-400">
+              <span class="inline-block mr-2">
+                <svg
+                  class="w-8 h-8 text-blue-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2zM12 15V9m-3 3h6"
+                  />
+                </svg>
+              </span>
+              FTP
+            </h2>
+            <p class="text-lg text-gray-300">
+              La herramienta para mover archivos grandes
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-blue-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-blue-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                </span>
+                ¿Qué es?
+              </h3>
+              <p class="text-gray-200 mb-4">
+                Es la forma estándar de subir y descargar archivos entre tu
+                computador y un servidor. Es ideal para mover muchos archivos a
+                la vez, como los de un sitio web.
+              </p>
+              <div class="bg-blue-500 bg-opacity-20 p-4 rounded-lg">
+                <p class="font-semibold">Puertos:</p>
+                <p>• 21 (Para el control de la conexión)</p>
+                <p>• 20 (Para la transferencia de datos)</p>
+              </div>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-green-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-green-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+                Beneficios y Desafíos
+              </h3>
+              <ul class="text-gray-200 space-y-2">
+                <li>
+                  • Pro: Es muy eficiente para grandes cantidades de datos.
+                </li>
+                <li>• Pro: Puedes reanudar una descarga si se interrumpe.</li>
+                <li>
+                  • Contra: No es seguro por defecto, la información viaja sin
+                  protección.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="mt-8 bg-gradient-to-r from-blue-500 to-cyan-500 bg-opacity-20 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold mb-4">
+              <span class="inline-block mr-2">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 15v-5h3m-3-1v10h3m-3 0h3m-3-4h3m-3-4h3m-3 4h3"
+                  />
+                </svg>
+              </span>
+              Ejemplos de Uso
+            </h3>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                <p class="font-semibold">Actualizar Sitios Web</p>
+                <p class="text-sm text-gray-300">
+                  Subir cambios a tu blog o tienda online.
+                </p>
+              </div>
+              <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                <p class="font-semibold">Copias de Seguridad</p>
+                <p class="text-sm text-gray-300">
+                  Mover tus archivos importantes a un servidor.
+                </p>
+              </div>
+              <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                <p class="font-semibold">Descargar Software</p>
+                <p class="text-sm text-gray-300">
+                  Obtener programas de un servidor central.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="max-w-5xl mx-auto py-8">
+          <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold mb-4 text-yellow-400">
+              <span class="inline-block mr-2">
+                <svg
+                  class="w-8 h-8 text-yellow-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </span>
+              DNS
+            </h2>
+            <p class="text-lg text-gray-300">
+              El director de la agenda telefónica de Internet
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-yellow-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-yellow-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                </span>
+                ¿Qué es?
+              </h3>
+              <p class="text-gray-200 mb-4">
+                Traduce los nombres de los sitios web (como `google.com`) a
+                direcciones IP (como `172.217.10.14`). Sin el DNS, tendrías que
+                memorizar números para cada sitio.
+              </p>
+              <div class="bg-yellow-500 bg-opacity-20 p-4 rounded-lg">
+                <p class="font-semibold">Puerto: 53</p>
+                <p class="text-sm mt-2">
+                  Es la puerta por donde viajan las búsquedas
+                </p>
+              </div>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-green-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-green-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+                Beneficios y Desafíos
+              </h3>
+              <ul class="text-gray-200 space-y-2">
+                <li>
+                  • Pro: Hace que Internet sea fácil de usar para las personas.
+                </li>
+                <li>• Pro: Es muy rápido gracias a su sistema de caché.</li>
+                <li>
+                  • Contra: Puede ser vulnerable a ataques que te desvían a
+                  sitios falsos.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="mt-8 bg-gradient-to-r from-yellow-500 to-orange-500 bg-opacity-20 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold mb-4">
+              <span class="inline-block mr-2">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 15v-5h3m-3-1v10h3m-3 0h3m-3-4h3m-3-4h3m-3 4h3"
+                  />
+                </svg>
+              </span>
+              ¿Cómo funciona una búsqueda DNS?
+            </h3>
+            <div class="grid md:grid-cols-4 gap-4">
+              <div class="bg-black bg-opacity-30 p-4 rounded-lg text-center">
+                <div class="text-2xl mb-2 flex justify-center items-center">
+                  <svg
+                    class="w-10 h-10 text-yellow-300"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <text
+                      x="50%"
+                      y="50%"
+                      dominant-baseline="middle"
+                      text-anchor="middle"
+                      font-size="12"
+                      fill="currentColor"
+                    >
+                      1
+                    </text>
+                  </svg>
+                </div>
+                <p class="font-semibold">Tú escribes</p>
+                <p class="text-sm text-gray-300">`google.com`</p>
+              </div>
+              <div class="bg-black bg-opacity-30 p-4 rounded-lg text-center">
+                <div class="text-2xl mb-2 flex justify-center items-center">
+                  <svg
+                    class="w-10 h-10 text-yellow-300"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <text
+                      x="50%"
+                      y="50%"
+                      dominant-baseline="middle"
+                      text-anchor="middle"
+                      font-size="12"
+                      fill="currentColor"
+                    >
+                      2
+                    </text>
+                  </svg>
+                </div>
+                <p class="font-semibold">Tu PC busca</p>
+                <p class="text-sm text-gray-300">En su caché local</p>
+              </div>
+              <div class="bg-black bg-opacity-30 p-4 rounded-lg text-center">
+                <div class="text-2xl mb-2 flex justify-center items-center">
+                  <svg
+                    class="w-10 h-10 text-yellow-300"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <text
+                      x="50%"
+                      y="50%"
+                      dominant-baseline="middle"
+                      text-anchor="middle"
+                      font-size="12"
+                      fill="currentColor"
+                    >
+                      3
+                    </text>
+                  </svg>
+                </div>
+                <p class="font-semibold">El servidor</p>
+                <p class="text-sm text-gray-300">Consulta a otros servidores</p>
+              </div>
+              <div class="bg-black bg-opacity-30 p-4 rounded-lg text-center">
+                <div class="text-2xl mb-2 flex justify-center items-center">
+                  <svg
+                    class="w-10 h-10 text-yellow-300"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <text
+                      x="50%"
+                      y="50%"
+                      dominant-baseline="middle"
+                      text-anchor="middle"
+                      font-size="12"
+                      fill="currentColor"
+                    >
+                      4
+                    </text>
+                  </svg>
+                </div>
+                <p class="font-semibold">Recibes la IP</p>
+                <p class="text-sm text-gray-300">...y se carga la página</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="max-w-5xl mx-auto py-8">
+          <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold mb-4 text-purple-400">
+              <span class="inline-block mr-2">
+                <svg
+                  class="w-8 h-8 text-purple-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2-3H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2z"
+                  />
+                </svg>
+              </span>
+              SMTP
+            </h2>
+            <p class="text-lg text-gray-300">
+              El cartero que entrega tus emails
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-purple-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-purple-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                </span>
+                ¿Qué es?
+              </h3>
+              <p class="text-gray-200 mb-4">
+                Es la regla principal para enviar correos electrónicos de un
+                servidor a otro. Funciona como un servicio de mensajería que
+                asegura que el email llegue a su destino.
+              </p>
+              <div class="bg-purple-500 bg-opacity-20 p-4 rounded-lg">
+                <p class="font-semibold">Puertos:</p>
+                <p>• 25 (Envío normal)</p>
+                <p>• 465 (Envío seguro)</p>
+                <p>• 587 (Envío más moderno)</p>
+              </div>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <h3 class="text-xl font-bold mb-4 text-green-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-green-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+                Beneficios y Desafíos
+              </h3>
+              <ul class="text-gray-200 space-y-2">
+                <li>
+                  • Pro: Es el estándar para enviar emails, es muy confiable.
+                </li>
+                <li>• Pro: Soporta la autenticación para evitar el abuso.</li>
+                <li>• Contra: Es el protocolo más usado para enviar spam.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="max-w-6xl mx-auto py-8">
+          <div class="text-center mb-8">
+            <h2
+              class="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
+            >
+              <span class="inline-block mr-2">
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 17v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2a2 2 0 002-2zM15 17v-2a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2zM21 17v-6a2 2 0 00-2-2h-2a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"
+                  />
+                </svg>
+              </span>
+              Resumen Comparativo
+            </h2>
+            <p class="text-lg text-gray-300">
+              Tabla de protocolos, puertos y su propósito
+            </p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table
+              class="w-full bg-white bg-opacity-10 rounded-xl backdrop-blur-sm"
+            >
+              <thead>
+                <tr class="border-b border-gray-600">
+                  <th class="p-4 text-left">Protocolo</th>
+                  <th class="p-4 text-left">Puerto(s)</th>
+                  <th class="p-4 text-left">Propósito</th>
+                  <th class="p-4 text-left">Seguridad</th>
+                  <th class="p-4 text-left">Uso Principal</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-200">
+                <tr
+                  class="border-b border-gray-700 hover:bg-white hover:bg-opacity-5"
+                >
+                  <td class="p-4 font-semibold text-red-400">HTTP/HTTPS</td>
+                  <td class="p-4">80 / 443</td>
+                  <td class="p-4">Páginas web</td>
+                  <td class="p-4">
+                    <span class="inline-block text-red-400">
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M10 14L21 3m0 0l-3.328 3.328M21 3l-7.962 7.962m0 0L3 14m7 7l-4.293-4.293M17 17l-4.293-4.293"
+                        />
+                      </svg>
+                    </span>
+                    <span class="inline-block text-green-400">
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="p-4">Navegar sitios, APIs</td>
+                </tr>
+                <tr
+                  class="border-b border-gray-700 hover:bg-white hover:bg-opacity-5"
+                >
+                  <td class="p-4 font-semibold text-green-400">SSH</td>
+                  <td class="p-4">22</td>
+                  <td class="p-4">Control remoto</td>
+                  <td class="p-4">
+                    <span class="inline-block text-green-400">
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="p-4">Administración servidores</td>
+                </tr>
+                <tr
+                  class="border-b border-gray-700 hover:bg-white hover:bg-opacity-5"
+                >
+                  <td class="p-4 font-semibold text-blue-400">FTP</td>
+                  <td class="p-4">20, 21</td>
+                  <td class="p-4">Transferencia archivos</td>
+                  <td class="p-4">
+                    <span class="inline-block text-red-400">
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M10 14L21 3m0 0l-3.328 3.328M21 3l-7.962 7.962m0 0L3 14m7 7l-4.293-4.293M17 17l-4.293-4.293"
+                        />
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="p-4">Subir sitios, backups</td>
+                </tr>
+                <tr
+                  class="border-b border-gray-700 hover:bg-white hover:bg-opacity-5"
+                >
+                  <td class="p-4 font-semibold text-yellow-400">DNS</td>
+                  <td class="p-4">53</td>
+                  <td class="p-4">Traducir nombres</td>
+                  <td class="p-4">
+                    <span class="inline-block text-yellow-400">
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.378 0 2.597-.736 3.16-1.928a3.992 3.992 0 00-3.16-5.836A3.992 3.992 0 0012 11.23a3.992 3.992 0 00-3.16 1.928"
+                        />
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="p-4">Navegación web</td>
+                </tr>
+                <tr class="hover:bg-white hover:bg-opacity-5">
+                  <td class="p-4 font-semibold text-purple-400">SMTP</td>
+                  <td class="p-4">25, 465, 587</td>
+                  <td class="p-4">Enviar emails</td>
+                  <td class="p-4">
+                    <span class="inline-block text-yellow-400">
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.378 0 2.597-.736 3.16-1.928a3.992 3.992 0 00-3.16-5.836A3.992 3.992 0 0012 11.23a3.992 3.992 0 00-3.16 1.928"
+                        />
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="p-4">Email, notificaciones</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div
+              class="bg-gradient-to-r from-green-500 to-blue-500 bg-opacity-20 p-6 rounded-xl"
+            >
+              <h3 class="text-xl font-bold mb-4 text-green-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-green-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 7l-7 7m0 0l-7-7m7 7l7-7"
+                    />
+                  </svg>
+                </span>
+                Puntos Clave
+              </h3>
+              <ul class="space-y-2 text-gray-200">
+                <li>• Los puertos son las "puertas" de un servicio.</li>
+                <li>
+                  • Los protocolos son las "reglas" para hablar en la red.
+                </li>
+                <li>• La seguridad es clave para proteger tus datos.</li>
+                <li>
+                  • Siempre prefiere las versiones seguras de los protocolos.
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-gradient-to-r from-purple-500 to-pink-500 bg-opacity-20 p-6 rounded-xl"
+            >
+              <h3 class="text-xl font-bold mb-4 text-purple-300">
+                <span class="inline-block mr-2">
+                  <svg
+                    class="w-6 h-6 text-purple-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                </span>
+                Mejores Prácticas
+              </h3>
+              <ul class="space-y-2 text-gray-200">
+                <li>• Usa HTTPS siempre que sea posible.</li>
+                <li>• Cierra los puertos que no necesites en tu firewall.</li>
+                <li>• Actualiza tu software regularmente.</li>
+                <li>• Usa contraseñas fuertes y únicas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

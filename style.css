@@ -1,0 +1,30 @@
+/*
+ * Estos son los estilos personalizados para la presentación.
+ * El resto del diseño está manejado por el framework Tailwind CSS.
+ */
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.protocol-card {
+    transition: all 0.3s ease;
+}
+
+.protocol-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
